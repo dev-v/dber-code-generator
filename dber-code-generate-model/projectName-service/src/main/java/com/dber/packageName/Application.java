@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 
-import com.dber.#{packageName}.config.#{projectJavaName}WebConfig.class;
+import com.dber.#{packageName}.config.#{projectJavaName}WebConfig;
 
 /**
  * <li>文件名称: Application.java</li>

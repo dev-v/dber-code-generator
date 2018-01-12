@@ -1,4 +1,6 @@
-package com.dber.#{packageName}.api;
+package com.dber.
+
+#{packageName}.api;
 
 import com.dber.base.AbstractClient;
 import com.dber.base.enums.DberSystem;
@@ -14,8 +16,8 @@ import org.springframework.stereotype.Service;
  * @since 2018/1/11
  */
 @Service
-public interface I#{projectJavaName}Client extends AbstractClient {
-    public PlatClient() {
-        super(DberSystem.#{projectJavaName});
+public class #{projectJavaName}Client extends AbstractClient{
+    public #{projectJavaName}Client(){
+        super(DberSystem.#{projectUpperCaseName});
     }
 }

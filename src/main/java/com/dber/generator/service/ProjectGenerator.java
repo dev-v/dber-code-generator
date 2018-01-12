@@ -76,7 +76,8 @@ public class ProjectGenerator {
                 String newContent = modelFile.getFileContent()
                         .replaceAll("#\\{projectName\\}", project.getProjectName())
                         .replaceAll("#\\{packageName\\}", project.getPackageName())
-                        .replaceAll("#\\{projectJavaName\\}", project.getJavaName());
+                        .replaceAll("#\\{projectJavaName\\}", project.getJavaName())
+                        .replaceAll("#\\{projectUpperCaseName\\}", project.getUpperCaseName());
                 // 写出配置文件
                 String newFilePath;
                 if (modelFile.getModelType().isNotNeedJavaProjectName()) {

@@ -2,7 +2,8 @@ package com.dber.#{packageName}.config;
 
 import com.dber.config.SystemConfig;
 import com.dber.cache.ICacheService;
-import com.dber.#{packageName}.api.I#{projectJavaName}Client;
+import com.dber.base.enums.DberSystem;
+import com.dber.base.util.BaseKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +35,8 @@ public class #{projectJavaName}WebConfig {
 
     @PostConstruct
     public void init() {
-        cacheService.put(I#{projectJavaName}Client.BASE_URL_KEY, systemConfig.getWeb().getBaseUrl());
+        cacheService.put(
+            BaseKeyUtil.getBaseKey(DberSystem.#{projectUpperCaseName}),
+            systemConfig.getWeb().getBaseUrl());
     }
 }
