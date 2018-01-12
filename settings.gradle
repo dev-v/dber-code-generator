@@ -1,0 +1,9 @@
+rootProject.name = 'dber-code-generator'
+
+includeFlat 'fastjson'
+
+includeFlat 'dber-tool'
+
+includeFlat 'dber-base-api'
+
+includeFlat 'dber-base-service'

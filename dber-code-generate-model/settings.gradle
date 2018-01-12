@@ -1,0 +1,13 @@
+rootProject.name = '#{projectName}'
+
+includeFlat 'fastjson'
+
+includeFlat 'dber-tool'
+
+includeFlat 'dber-base-api'
+
+includeFlat 'dber-base-service'
+
+include '#{projectName}-api'
+
+include '#{projectName}-service'
