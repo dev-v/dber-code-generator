@@ -28,4 +28,5 @@ dependencies {
 
 	compile project(":dber-#{packageName}-api")
 	compile project(":dber-base-service")
+	compile project(":dber-plat:dber-plat-api")
 }

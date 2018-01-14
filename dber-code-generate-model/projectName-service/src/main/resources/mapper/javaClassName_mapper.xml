@@ -84,7 +84,7 @@
         <include refid="maxLimit"></include>
     </select>
 
-    <select id="queryOne" resultType="Account">
+    <select id="queryOne" resultType="#{javaClassName}">
         select * from #{tableName}
         <include refid="where"></include>
         limit 1

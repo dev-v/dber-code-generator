@@ -1,22 +1,11 @@
 package com.dber.#{packageName}.config;
 
-import com.dber.config.SystemConfig;
-import com.dber.cache.ICacheService;
-import com.dber.base.enums.DberSystem;
-import com.dber.base.util.BaseKeyUtil;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerInitializedEvent;
-import org.springframework.context.ApplicationListener;
+import com.dber.plat.api.PlatClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import com.dber.base.config.BaseWebConfig;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 /**
  * <li>文件名称: WebConfig.java</li>
@@ -29,29 +18,7 @@ import java.net.UnknownHostException;
  * @author dev-v
  */
 @Configuration
-@Import({ #{projectJavaName}ServiceConfig.class,BaseWebConfig.class})
+@Import({ #{projectJavaName}ServiceConfig.class,BaseWebConfig.class, PlatClient.class})
 @ComponentScan("com.dber.#{packageName}.web")
-public class #{projectJavaName}WebConfig implements ApplicationListener<EmbeddedServletContainerInitializedEvent> {
-
-    private static final Log log = LogFactory.getLog(#{projectJavaName}WebConfig.class);
-
-    @Autowired
-    SystemConfig systemConfig;
-
-    @Autowired
-    ICacheService cacheService;
-
-    @Override
-    public void onApplicationEvent(EmbeddedServletContainerInitializedEvent event) {
-        int port = event.getEmbeddedServletContainer().getPort();
-        String ip = null;
-
-        try {
-            ip = InetAddress.getLocalHost().getHostAddress();
-        } catch (UnknownHostException e) {
-            log.error(e);
-        }
-
-        cacheService.put(BaseKeyUtil.getBaseKey(DberSystem.#{projectUpperCaseName}), "http://" + ip + ":" + port);
-    }
+public class #{projectJavaName}WebConfig {
 }

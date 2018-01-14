@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * <li>修改记录: ...</li>
  * <li>内容摘要: 任何客户端api-server请务必实现IClient标记接口</li>
- * <li>访问需授权：http://host:port/api/test?auth_params_system=plat&auth_params_key=123</li>
+ * <li>访问需授权</li>
+ * <li>本类获取数据时建议从数据源本身获取，redis等缓存建议在api-sdk上面做</li>
  * <li>其他说明: ...</li>
  *
  * @author dev-v

@@ -8,6 +8,9 @@ includeFlat 'dber-base-api'
 
 includeFlat 'dber-base-service'
 
+includeFlat 'dber-plat'
+include ':dber-plat:dber-plat-api'
+
 include '#{projectName}-api'
 
 include '#{projectName}-service'
