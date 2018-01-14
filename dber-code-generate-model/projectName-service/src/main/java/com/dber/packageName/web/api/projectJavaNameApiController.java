@@ -1,8 +1,11 @@
 package com.dber.#{packageName}.web.api;
 
 import com.dber.base.IClient;
+import com.dber.base.enums.DberSystem;
+import com.dber.base.util.BaseKeyUtil;
 import com.dber.base.web.vo.Response;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,9 +22,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class #{projectJavaName}ApiController implements IClient{
 
+    /**
+     * @param system 客户端系统
+     * @return
+     */
     @RequestMapping("/test")
-    public Response test() {
-        return Response.newSuccessResponse("test");
+    public Response test(@RequestParam(BaseKeyUtil.auth_params_system) DberSystem system) {
+        return Response.newSuccessResponse(system);
     }
 
 }

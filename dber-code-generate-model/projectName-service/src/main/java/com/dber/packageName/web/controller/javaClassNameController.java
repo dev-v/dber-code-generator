@@ -1,4 +1,4 @@
-package com.dber.#{packageName}.web;
+package com.dber.#{packageName}.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

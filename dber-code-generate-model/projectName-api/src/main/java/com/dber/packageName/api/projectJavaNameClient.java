@@ -1,9 +1,8 @@
-package com.dber.
-
-#{packageName}.api;
+package com.dber.#{packageName}.api;
 
 import com.dber.base.AbstractClient;
 import com.dber.base.enums.DberSystem;
+import com.dber.base.result.Result;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,5 +18,9 @@ import org.springframework.stereotype.Service;
 public class #{projectJavaName}Client extends AbstractClient{
     public #{projectJavaName}Client(){
         super(DberSystem.#{projectUpperCaseName});
+    }
+
+    public Result<String> test() {
+        return clientUtil.get("/api/test");
     }
 }
