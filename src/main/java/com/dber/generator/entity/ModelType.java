@@ -14,7 +14,8 @@ public enum ModelType {
     entity, AppConfig, ServiceConfig, WebConfig, _mapper, // xml 映射文件
     IMapper, // java mapper 接口
     IService, Service, Controller, Application, ApplicationTest, projectJavaNameClientTest,
-    settings, build, application, projectJavaNameClient, projectJavaNameApiController;
+    settings, build, application, projectJavaNameClient, projectJavaNameApiController,
+    projectJavaNameClientService, IprojectJavaNameClient;
 
     /**
      * 静态配置文件
@@ -25,7 +26,8 @@ public enum ModelType {
         return this == projectJavaNameApiController || this == AppConfig || this == ModelType.ServiceConfig
                 || this == ModelType.WebConfig || this == projectJavaNameClientTest
                 || this == Application || this == ApplicationTest || this == settings
-                || this == ModelType.build || this == ModelType.application || this == ModelType.projectJavaNameClient;
+                || this == ModelType.build || this == ModelType.application || this == ModelType.projectJavaNameClient
+                || this == projectJavaNameClientService || this == IprojectJavaNameClient;
     }
 
     /**
@@ -39,6 +41,7 @@ public enum ModelType {
         return ModelType.projectJavaNameClient == this || settings == this ||
                 Application == this || ApplicationTest == this ||
                 this == ModelType.build || this == ModelType.application || this == projectJavaNameClientTest ||
-                this == projectJavaNameApiController;
+                this == projectJavaNameApiController
+                || this == projectJavaNameClientService || this == IprojectJavaNameClient;
     }
 }

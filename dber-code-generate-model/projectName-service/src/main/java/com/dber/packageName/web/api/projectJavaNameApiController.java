@@ -23,6 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class #{projectJavaName}ApiController implements IClient{
 
+    @Autowired
+    private #{projectJavaName}ClientService clientService;
+
     /**
      * @param system 客户端系统
      * @return
