@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018/1/12
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/")
 public class #{projectJavaName}ApiController implements IClient{
 
     @Autowired
@@ -30,7 +30,7 @@ public class #{projectJavaName}ApiController implements IClient{
      * @param system 客户端系统
      * @return
      */
-    @RequestMapping("/test")
+    @RequestMapping("test")
     public Response test(@RequestParam(BaseKeyUtil.auth_params_system) DberSystem system) {
         return Response.newSuccessResponse(system);
     }
