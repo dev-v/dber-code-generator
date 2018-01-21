@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @since 2018/1/11
  */
 @Service
-public class #{projectJavaName}Client extends AbstractClient{
+public class #{projectJavaName}Client extends AbstractClient implements I#{projectJavaName}Client{
     public #{projectJavaName}Client(){
         super(DberSystem.#{projectUpperCaseName});
     }
