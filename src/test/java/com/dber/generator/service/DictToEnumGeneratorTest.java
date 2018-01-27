@@ -30,6 +30,7 @@ public class DictToEnumGeneratorTest {
     @Autowired
     DictToEnumService dictToEnum;
 
+    //模型文件路径
     private String resourcesPath = "E:\\dber_work\\dber-code-generator\\src\\test\\resources\\";
 
     @Test

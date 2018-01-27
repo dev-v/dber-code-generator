@@ -44,4 +44,9 @@ public class ProjectGeneratorTest {
 		generator.createProject(new Project(modelPath, projectDir, "dber_shop", "dber-shop", "shop"));
 	}
 
+	@Test
+	public void test2_generate_dber_uploader() {
+		generator.createProject(new Project(modelPath, projectDir, "dber_plat", "dber-upload", "upload"));
+	}
+
 }
