@@ -33,6 +33,8 @@ build/*
 
 out/*
 
+resources/enums/*
+
 .idea/**
 
 dber.iml
