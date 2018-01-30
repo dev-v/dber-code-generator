@@ -1,9 +1,9 @@
 package com.dber.#{packageName}.web.api;
 
 import com.dber.base.IClient;
+import com.dber.base.entity.Response;
 import com.dber.base.enums.DberSystem;
 import com.dber.base.util.BaseKeyUtil;
-import com.dber.base.web.vo.Response;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,9 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/")
 public class #{projectJavaName}ApiController implements IClient{
-
-    @Autowired
-    private #{projectJavaName}ClientService clientService;
 
     /**
      * @param system 客户端系统

@@ -1,7 +1,5 @@
 package com.dber.#{packageName}.web.pub;
 
-import com.dber.plat.web.api.#{projectJavaName}ClientService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +15,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/pub/")
 public class #{projectJavaName}PublicController {
-
-    @Autowired
-    private #{projectJavaName}ClientService clientService;
 
 }
